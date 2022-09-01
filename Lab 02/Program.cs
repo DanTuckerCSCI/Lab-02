@@ -8,7 +8,7 @@ var firstNumberAsString = Console.ReadLine();
 int firstNum;
 while (!int.TryParse(firstNumberAsString, out firstNum))
 {
-    Console.WriteLine("This is not a number!");
+    Console.WriteLine("This is not a number!\nInput first number to be added: ");
     firstNumberAsString = Console.ReadLine();
 }
 // ask for second number
@@ -18,7 +18,7 @@ var secondNumberAsString = Console.ReadLine();
 int secondNum;
 while (!int.TryParse(secondNumberAsString, out secondNum))
 {
-    Console.WriteLine("This is not a number!");
+    Console.WriteLine("This is not a number!\nInput second number to be added: ");
     secondNumberAsString = Console.ReadLine();
 }
 
