@@ -75,6 +75,8 @@ Console.WriteLine($"| float\t|\t {sizeof(float)} \t\t\t|\t {float.MinValue} \t\t
 Console.WriteLine($"| double|\t {sizeof(double)} \t\t\t|\t {double.MinValue} \t\t|\t{double.MaxValue} \t\t\t");
 Console.WriteLine($"| decimal|\t {sizeof(decimal)} \t\t\t|\t {decimal.MinValue} \t|\t{decimal.MaxValue} \t\t");
         
+//--------------------------------Section 4-------------------------------
+Console.WriteLine("\n-----------Now we will try a calculator-------------");
 
 
 
