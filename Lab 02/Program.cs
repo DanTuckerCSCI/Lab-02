@@ -77,7 +77,70 @@ Console.WriteLine($"| decimal|\t {sizeof(decimal)} \t\t\t|\t {decimal.MinValue} 
         
 //--------------------------------Section 4-------------------------------
 Console.WriteLine("\n-----------Now we will try a calculator-------------");
+// need a loop to keep it going until escape is pressed
+// ask for first number
+Console.WriteLine("Input first number or esc to quit: ");
+var fifthNumberAsString = Console.ReadLine();
+var flag = true;
+while (flag)
+{
+  
 
+    int fifthNum;
+    //validate
+    while (!int.TryParse(fifthNumberAsString, out fifthNum))
+    {
+        Console.WriteLine("This is not a number!\nInput a number please. : ");
+        fifthNumberAsString = Console.ReadLine();
+    }
+
+    // ask for process
+    Console.WriteLine("Input +,-,*,/,or %: ");
+    var characterAsString = Console.ReadLine();
+
+    // ask for second number;
+    Console.WriteLine("Input second number: ");
+    var sixthNumberAsString = Console.ReadLine();
+
+    int sixthNum;
+
+    //validate
+    while (!int.TryParse(sixthNumberAsString, out sixthNum))
+    {
+        Console.WriteLine("This is not a number!\nInput second number: ");
+        sixthNumberAsString = Console.ReadLine();
+    }
+
+
+    int total = 0;
+    switch (characterAsString)
+    {
+        case "+":
+            total = fifthNum + sixthNum;
+            Console.WriteLine(fifthNum +  " + " + sixthNum + " = " + total);
+            break;
+        case "-":   
+            total = fifthNum - sixthNum;
+            Console.WriteLine(fifthNum + " - " + sixthNum + " = " + total);
+            break;
+        case "*":
+            total = fifthNum * sixthNum;
+            Console.WriteLine(fifthNum + " * " + sixthNum + " = " + total);
+            break;
+        case "/":
+            total = fifthNum / sixthNum;
+            Console.WriteLine(fifthNum + " / " + sixthNum + " = " + total);
+            break;
+        case "%":
+            total = fifthNum % sixthNum;
+            Console.WriteLine(fifthNum + " % " + sixthNum + " = " + total);
+            break;  
+   }
+    Console.WriteLine("Input first number or esc to quit: ");
+    fifthNumberAsString = Console.ReadLine();
+    if (fifthNumberAsString == "esc")
+        flag = false;
+}
 
 
 
